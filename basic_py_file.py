@@ -1,12 +1,7 @@
-def get_hello() -> str:
-    return "Hello"
-
-def get_world() -> str:
-    return "World"
-
+import hello, world
 
 def main() -> None:
-    print("{} {}".format(get_hello(), get_world()))
+    print("{} {}".format(hello.get_hello(), world.get_world()))
 
 if __name__ == '__main__':
     main()
