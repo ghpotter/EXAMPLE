@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'pip install flask'
+        sh 'echo \'message\''
       }
     }
 
@@ -16,13 +16,13 @@ pipeline {
       parallel {
         stage('Test') {
           steps {
-            sh 'python test_hello.py'
+            sh 'python3 test_hello.py'
           }
         }
 
         stage('Test-2') {
           steps {
-            sh 'python test_world.py'
+            sh 'python3 test_world.py'
           }
         }
 
@@ -31,7 +31,7 @@ pipeline {
 
     stage('error') {
       steps {
-        sh 'python basic_py_file.py'
+        sh 'python3 basic_py_file.py'
       }
     }
 
