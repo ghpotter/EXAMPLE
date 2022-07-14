@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo \'message\''
+        sh 'python new.py'
       }
     }
 
