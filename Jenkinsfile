@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'this message'
+        sh 'sudo pip install flask'
       }
     }
 
