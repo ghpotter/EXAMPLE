@@ -16,22 +16,22 @@ pipeline {
       parallel {
         stage('Test') {
           steps {
-            sh '\'python test_hello.py\''
+            sh 'python test_hello.py'
           }
         }
 
         stage('Test-2') {
           steps {
-            sh '\'python test_world.py\''
+            sh 'python test_world.py'
           }
         }
 
       }
     }
 
-    stage('') {
+    stage('error') {
       steps {
-        sh '\'python basic_py_file.py\''
+        sh 'python basic_py_file.py'
       }
     }
 
